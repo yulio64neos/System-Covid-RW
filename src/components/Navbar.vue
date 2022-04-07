@@ -34,7 +34,7 @@
       <v-navigation-drawer v-model="drawer" absolute temporary>
           <v-list nav dense>
               <v-subheader>Settings</v-subheader>
-              <v-list-item-group active-class="deep-purple--text text--accent-4">
+              <v-list-item-group active-class="green text--accent-4">
                   <v-list-item
                     v-for="item in items"
                     :key="item.id"
