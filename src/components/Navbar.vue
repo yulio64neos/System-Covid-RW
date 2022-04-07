@@ -1,5 +1,12 @@
 <template>
-  
+  <!-- Creación del navbar -->
+  <div>      
+      <v-app-bar app dark>
+          <v-btn @click="drawer = true" class="d-flex d-sm-none" icon elevation="0"> 
+              <v-icon>fa-solid fa-bars</v-icon>
+          </v-btn>
+      </v-app-bar>
+  </div>
 </template>
 
 <script>
