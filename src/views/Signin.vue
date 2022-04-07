@@ -1,6 +1,6 @@
 <template>
   <div>
-      <p>Esta es la Company</p>
+      <p>Iniciar Sesion</p>
   </div>
 </template>
 
