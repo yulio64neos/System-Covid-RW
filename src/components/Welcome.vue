@@ -23,10 +23,7 @@
                   width="100%"
                   :class="`${loading ? 'mt-2' : ''}`"
                 >
-                  <v-badge
-                    left
-                    icon= "fas fa-info"
-                  >
+                  <v-badge left icon="fas fa-info">
                     <p class="text-justify text-normal font-italic texto">
                       "El Covid-19 proviene de una familia de virus que causan
                       enfermedades (Desde el resfriado común hasta enfermedades
@@ -35,16 +32,37 @@
                     </p>
                   </v-badge>
                 </v-skeleton-loader>
-                <v-btn rounded class="text-none gob" color="gobierno" href="https://coronavirus.gob.mx/covid-19/">
-                    Visite la página del Gobierno
+                <v-btn
+                  rounded
+                  class="text-none gob"
+                  color="gobierno"
+                  href="https://coronavirus.gob.mx/covid-19/"
+                >
+                  Visite la página del Gobierno
                 </v-btn>
-              </v-col>              
+              </v-col>
             </v-row>
-            <v-row>
-                <v-col cols="12" class="primary justify-center d-flex" sm="8">
-
+            <v-card class="pa-5">
+              <v-row class=" d-flex justify-center">
+                <v-col cols="12" sm="6" class="">
+                  <v-img
+                    class="logoPue"
+                    src="@/assets/images/logo-superior.png"
+                    @click="appPuebla()"
+                    max-height="400"
+                    max-width="450"
+                  >
+                  </v-img>
                 </v-col>
-            </v-row>
+                <v-col cols="12" sm="6" class="">
+                  <h4 class=" text-justify text-normal">
+                    Tambien puede visitar la página del Gobierno de Puebla,
+                    donde se brinda la información mediante una app
+                  </h4>
+                  <v-btn class="mt-4 pa-0" text color="puebla">Alerta Covid</v-btn>
+                </v-col>
+              </v-row>
+            </v-card>
           </v-col>
           <v-col cols="10" sm="8" md="6" class="">
             <v-img>
@@ -66,15 +84,29 @@
 export default {
   data: () => ({
     loading: false,
+    covid:{
+        cases: 0,
+        deaths: 0,
+        recovered: 0
+    }
   }),
+  methods: {
+    appPuebla() {
+      this.$router.push("https://alertacovid.puebla.gob.mx/");
+    },
+  },
 };
 </script>
 
 <style scoped>
-.texto{    
-    font-size: 18px;
+.texto {
+  font-size: 18px;
 }
-.gob{
-    color: white !important;
+.gob {
+  color: white !important;
+}
+
+.logoPue {
+  cursor: pointer;
 }
 </style>

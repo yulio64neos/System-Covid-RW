@@ -19,7 +19,8 @@ export default new Vuetify({
         success: '#4CAF50',
         warning: '#FFC107',
         logo: '#4f658e',
-        gobierno: '#173f37'
+        gobierno: '#173f37',
+        puebla: '#611331'
       },
     },
   },
