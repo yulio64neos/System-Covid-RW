@@ -8,7 +8,8 @@ import 'roboto-fontface/css/roboto/roboto-fontface.css'
 import '@fortawesome/fontawesome-free/css/all.css'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
-Vue.use(VueAxios, axios)
+import VueSweetalert2 from 'vue-sweetalert2';
+Vue.use(VueAxios, axios, VueSweetalert2)
 axios.defaults.baseURL = 'https://sistema-control-covid.herokuapp.com/api';
 
 Vue.config.productionTip = false

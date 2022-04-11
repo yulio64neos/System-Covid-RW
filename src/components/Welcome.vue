@@ -59,7 +59,9 @@
                     Tambien puede visitar la página del Gobierno de Puebla,
                     donde se brinda la información mediante una app
                   </h4>
-                  <v-btn class="mt-4 pa-0" text color="puebla">Alerta Covid</v-btn>
+                  <v-card-actions class="justify-center">
+                      <v-btn class="mt-4 pa-0" text color="puebla">Alerta Covid</v-btn>
+                  </v-card-actions>
                 </v-col>
               </v-row>
             </v-card>
